@@ -1,22 +1,20 @@
 "use client";
 
 import React from "react";
-import { useRouter } from "next/router";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
-const Custom500: React.FC = () => {
-    const router = useRouter();
-
+const NotFoundPage: React.FC = () => {
     return (
         <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 text-gray-800 text-center px-4">
         {/* Animated Emoji */}
         <motion.div
-            className="text-6xl text-red-500"
+            className="text-6xl text-yellow-500"
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            transition={{ duration: 0.6, yoyo: Infinity }}
+            transition={{ duration: 0.6, repeat: Infinity, repeatType: "reverse" }}
         >
-            ⚠️
+            🚧
         </motion.div>
 
         {/* Error Message */}
@@ -26,7 +24,7 @@ const Custom500: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
         >
-            500 - Server Error
+            404 - Page Not Found
         </motion.h1>
 
         <motion.p
@@ -35,21 +33,25 @@ const Custom500: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
         >
-            Oops! Something went wrong on our end. Please try again later.
+            Oops! The page you’re looking for doesn’t exist.
         </motion.p>
 
-        {/* Back to Home Button */}
-        <motion.button
-            className="mt-6 px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"
-            onClick={() => router.push("/")}
+        {/* Back to Home Link */}
+        <motion.div
+            className="mt-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
         >
+            <Link
+            href="/"
+            className="px-6 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+            >
             Go Back Home
-        </motion.button>
+            </Link>
+        </motion.div>
         </main>
     );
 };
 
-export default Custom500;
+export default NotFoundPage;
