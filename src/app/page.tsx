@@ -29,7 +29,7 @@ const HomePage: React.FC = () => {
 
   // Founders Data
   const founders = [
-    { name: 'Bom | Piyawat Wongyard', title: 'Full-Stack Developer', bio: 'Driven to build impactful SaaS solutions.', contact: 'about/piyawat', imgSrc: '/images/founders/BOM.png' },
+    { name: 'Bom | Piyawat Wongyat', title: 'Full-Stack Developer', bio: 'Driven to build impactful SaaS solutions.', contact: 'about/piyawat', imgSrc: '/images/founders/BOM.png' },
     { name: 'Smart | Natnawat Panisarasirikul', title: 'Dev & Product Strategist', bio: 'Passionate about creating efficient project tools.', contact: 'about/founders/natnawat', imgSrc: '/images/founders/SMART.png' },
     { name: 'Ohm | Jessada Naka', title: 'Developer', bio: 'Loves building user-friendly solutions.', contact: 'about/jessada', imgSrc: '/images/founders/OHM.png' },
     { name: 'Juné | Thidarat Onsanit', title: 'CEO', bio: 'Focuses on innovation and growth.', contact: 'about/thidarat', imgSrc: '/images/founders/JUNE.png' },
