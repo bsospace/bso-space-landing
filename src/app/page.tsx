@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Threads from '@/components/Threads';
 
 const HomePage: React.FC = () => {
   // Projects Data
@@ -10,27 +11,33 @@ const HomePage: React.FC = () => {
       title: "BSO Space Blog",
       description: "A collaborative blog platform targeting Software Engineering students.",
       imgSrc: "/images/projects/BSOSpace-Blog.png",
-      repoLink: "https://github.com/BSO-Space/BSOSpace-Blog-Frontend",
+      repoLink: "https://github.com/bsospace/BSOSpace-Blog-Frontend",
       projectLink: "https://blog.bsospace.com",
     },
     {
       title: "Share Bill",
       description: "An application designed to simplify bill splitting among groups.",
       imgSrc: "/images/projects/Share-Bill.png",
-      repoLink: "https://github.com/BSO-Space/share-bill",
+      repoLink: "https://github.com/bsospace/share-bill",
       projectLink: "https://sharebill.bsospace.com",
     },
     {
-      title: "[In future] JustProj",
-      description: "Project Tracking Tool | A scalable, customizable task management system.",
-      imgSrc: "/images/projects/Just-Proj.jpg",
+      title: "Simple Poll (Coming Soon . . .)",
+      description: "A simple polling application for quick decision-making.",
+      repoLink: "https://github.com/bsospace/poll",
+      imgSrc: "/images/projects/soon.png",
+    },
+    {
+      title: "Attendify (Coming Soon . . .)",
+      description: "An event management platform for creating and managing events.",
+      imgSrc: "/images/projects/soon.png",
     },
   ];
 
   // Founders Data
   const founders = [
     { name: 'Bom | Piyawat Wongyat', title: 'Full-Stack Developer', bio: 'Driven to build impactful SaaS solutions.', contact: 'about/piyawat', imgSrc: '/images/founders/BOM.png' },
-    { name: 'Smart | Natnawat Panisarasirikul', title: 'Dev & Product Strategist', bio: 'Passionate about creating efficient project tools.', contact: 'about/founders/natnawat', imgSrc: '/images/founders/SMART.png' },
+    { name: 'Smart | Natnawat Panisarasirikul', title: 'Dev & Product Strategist', bio: 'Passionate about creating efficient project tools.', contact: 'about/natnawat', imgSrc: '/images/founders/SMART.png' },
     { name: 'Ohm | Jessada Naka', title: 'Developer', bio: 'Loves building user-friendly solutions.', contact: 'about/jessada', imgSrc: '/images/founders/OHM.png' },
     { name: 'Juné | Thidarat Onsanit', title: 'CEO', bio: 'Focuses on innovation and growth.', contact: 'about/thidarat', imgSrc: '/images/founders/JUNE.png' },
   ]
@@ -42,9 +49,16 @@ const HomePage: React.FC = () => {
   };
 
   return (
-    <main className="bg-white text-gray-800 font-sans">
+    <main className="text-gray-800 font-sans">
       {/* Hero Section */}
       <section className="flex flex-col items-center justify-center min-h-screen text-center space-y-6 py-10">
+        <div style={{ width: '100%', height: '100%', position: 'fixed' }} className='-z-20 top-48'>
+          <Threads
+            amplitude={0.5}
+            distance={0.2}
+            enableMouseInteraction={true}
+          />
+        </div>
         <motion.h1
           className="text-6xl md:text-8xl font-bold text-gray-800"
           initial={{ opacity: 0, y: -30 }}
@@ -75,7 +89,7 @@ const HomePage: React.FC = () => {
       {/* Project Section */}
       <section id="projects-section" className="bg-gray-100 py-16">
         <div className="max-w-5xl mx-auto space-y-12 px-4">
-          <h2 className="text-4xl font-semibold text-center mb-8">Projects</h2>
+          <h2 className="text-4xl font-semibold text-center mb-8 ">Projects</h2>
           {projects.map((project, index) => (
             <motion.div
               key={index}

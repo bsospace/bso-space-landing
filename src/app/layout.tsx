@@ -16,7 +16,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/app/favicon.ico" />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <footer className='text-center text-white text-sm py-4 bg-gray-800'>
+          &copy; {new Date().getFullYear()} | BSO Space
+        </footer>
+      </body>
     </html>
   );
 }
