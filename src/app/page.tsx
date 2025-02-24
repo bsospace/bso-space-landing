@@ -164,7 +164,7 @@ const HomePage: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <img src={founder.imgSrc} alt={founder.name} className="w-full h-full object-cover" width={400} height={350} layout="intrinsic" loading="lazy" />
+              <Image src={founder.imgSrc} alt={founder.name} className="w-full h-full object-cover" width={400} height={350} loading="lazy" />
               <div className="absolute bottom-0 w-full p-4 bg-gradient-to-t from-black to-transparent text-white">
                 <h3 className="text-xl font-semibold">{founder.name}</h3>
                 <p className="text-sm text-gray-200">{founder.title}</p>
